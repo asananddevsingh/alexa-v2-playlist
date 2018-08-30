@@ -1,0 +1,116 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-GB": {
+          "summary": "The Economist",
+          "examplePhrases": [
+            "Alexa, open the Economist",
+            "Alexa, ask the Economist to start the highlights",
+            "Alexa, ask the Economist to get me the latest and name the topic"
+          ],
+          "keywords": [
+            "highlights",
+            "topics",
+            "latest"
+          ],
+          "name": "The Economist",
+          "description": "To have an upper hand and to be a leader in market, The Economist always tries to be best in industry and Alexa is perfect Solution. Alexa Cohesively interacts with voice assistant and query per subscribed person. The Economist Global Business Review is a new bilingual digital app from the editors of The Economist group. Each month, the best business, finance and technology articles from the weekly publication are selected and translated, and delivered to your mobile device with an intuitive and attractive user interface.",
+          "smallIconUri": "https://alexademo.ninja/skills/logo-108.png",
+          "largeIconUri": "https://alexademo.ninja/skills/logo-512.png"
+        },
+        "en-IN": {
+          "summary": "The Economist",
+          "examplePhrases": [
+            "Alexa, open the Economist",
+            "Alexa, ask the Economist to start the highlights",
+            "Alexa, ask the Economist to get me the latest and name the topic"
+          ],
+          "keywords": [
+            "highlights",
+            "topics",
+            "latest"
+          ],
+          "name": "The Economist",
+          "description": "To have an upper hand and to be a leader in market, The Economist always tries to be best in industry and Alexa is perfect Solution. Alexa Cohesively interacts with voice assistant and query per subscribed person. The Economist Global Business Review is a new bilingual digital app from the editors of The Economist group. Each month, the best business, finance and technology articles from the weekly publication are selected and translated, and delivered to your mobile device with an intuitive and attractive user interface.",
+          "smallIconUri": "https://alexademo.ninja/skills/logo-108.png",
+          "largeIconUri": "https://alexademo.ninja/skills/logo-512.png"
+        },
+        "en-US": {
+          "summary": "The Economist",
+          "examplePhrases": [
+            "Alexa, open the Economist",
+            "Alexa, ask the Economist to start the highlights",
+            "Alexa, ask the Economist to get me the latest and name the topic"
+          ],
+          "keywords": [
+            "highlights",
+            "topics",
+            "latest"
+          ],
+          "name": "The Economist",
+          "description": "To have an upper hand and to be a leader in market, The Economist always tries to be best in industry and Alexa is perfect Solution. Alexa Cohesively interacts with voice assistant and query per subscribed person. The Economist Global Business Review is a new bilingual digital app from the editors of The Economist group. Each month, the best business, finance and technology articles from the weekly publication are selected and translated, and delivered to your mobile device with an intuitive and attractive user interface.",
+          "smallIconUri": "https://alexademo.ninja/skills/logo-108.png",
+          "largeIconUri": "https://alexademo.ninja/skills/logo-512.png"
+        },
+        "en-CA": {
+          "summary": "The Economist",
+          "examplePhrases": [
+            "Alexa, open the Economist",
+            "Alexa, ask the Economist to start the highlights",
+            "Alexa, ask the Economist to get me the latest and name the topic"
+          ],
+          "keywords": [
+            "highlights",
+            "topics",
+            "latest"
+          ],
+          "name": "The Economist",
+          "description": "To have an upper hand and to be a leader in market, The Economist always tries to be best in industry and Alexa is perfect Solution. Alexa Cohesively interacts with voice assistant and query per subscribed person. The Economist Global Business Review is a new bilingual digital app from the editors of The Economist group. Each month, the best business, finance and technology articles from the weekly publication are selected and translated, and delivered to your mobile device with an intuitive and attractive user interface.",
+          "smallIconUri": "https://alexademo.ninja/skills/logo-108.png",
+          "largeIconUri": "https://alexademo.ninja/skills/logo-512.png"
+        },
+        "en-AU": {
+          "summary": "The Economist",
+          "examplePhrases": [
+            "Alexa, open the Economist",
+            "Alexa, ask the Economist to start the highlights",
+            "Alexa, ask the Economist to get me the latest and name the topic"
+          ],
+          "keywords": [
+            "highlights",
+            "topics",
+            "latest"
+          ],
+          "name": "The Economist",
+          "description": "To have an upper hand and to be a leader in market, The Economist always tries to be best in industry and Alexa is perfect Solution. Alexa Cohesively interacts with voice assistant and query per subscribed person. The Economist Global Business Review is a new bilingual digital app from the editors of The Economist group. Each month, the best business, finance and technology articles from the weekly publication are selected and translated, and delivered to your mobile device with an intuitive and attractive user interface.",
+          "smallIconUri": "https://alexademo.ninja/skills/logo-108.png",
+          "largeIconUri": "https://alexademo.ninja/skills/logo-512.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Include your testing instruction (if any) here",
+      "category": "STREAMING_SERVICE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/src/alexa-interface"
+        },
+        "interfaces": [{
+          "type": "AUDIO_PLAYER"
+        }]
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

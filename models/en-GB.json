@@ -1,0 +1,197 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "economist",
+            "intents": [{
+                    "name": "AMAZON.CancelIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "SearchTopic",
+                    "slots": [{
+                        "name": "mySearchTopic",
+                        "type": "ECONOMIST_SearchTopic"
+                    }],
+                    "samples": [
+                        "{mySearchTopic}",
+                        "get me the latest {mySearchTopic}",
+                        "get me the latest on {mySearchTopic}",
+                        "ask the economist for the latest on {mySearchTopic}",
+                        "search by topic"
+                    ]
+                },
+                {
+                    "name": "Highlight",
+                    "samples": [
+                        "listen to the highlight",
+                        "start the highlights",
+                        "this week's highlight",
+                        "highlight"
+                    ]
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "slots": [],
+                    "samples": []
+                }
+            ],
+            "types": [{
+                "name": "ECONOMIST_SearchTopic",
+                "values": [{
+                        "name": {
+                            "value": "European Union",
+                            "synonyms": [
+                                "EU",
+                                "E.U.",
+                                "eu",
+                                "🇪🇺"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "Business enterprise",
+                            "synonyms": [
+                                "commercial",
+                                "industrial",
+                                "professional activity"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "Europe",
+                            "synonyms": [
+                                "continent Europe",
+                                "Europea",
+                                "Northwest Eurasia"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "London",
+                            "synonyms": [
+                                "UK",
+                                "United Kingdom",
+                                "England"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "Donald Trump",
+                            "synonyms": [
+                                "Donald John Trump",
+                                "Donald J. Trump",
+                                "Trump",
+                                "The Donald",
+                                "POTUS",
+                                "POTUS 45",
+                                "Donald J Trump",
+                                "President Donald Trump",
+                                "President Trump",
+                                "President Donald J. Trump",
+                                "President Donald John Trump"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "China",
+                            "synonyms": [
+                                "CN",
+                                "PR China",
+                                "PRC",
+                                "cn",
+                                "China"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "United States",
+                            "synonyms": [
+                                "U.S.A.",
+                                "United States",
+                                "USA",
+                                "America",
+                                "the States",
+                                "U.S.",
+                                "US",
+                                "the US",
+                                "the United States",
+                                "the United States of America",
+                                "🇺🇸"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "United Kingdom",
+                            "synonyms": [
+                                "UK",
+                                "🇬🇧",
+                                "United Kingdom of Great Britain"
+                            ]
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "Germany",
+                            "synonyms": [
+                                "FRG",
+                                "BRD",
+                                "Bundesrepublik Deutschland",
+                                "Federal Republic of Germany",
+                                "de",
+                                "🇩🇪"
+                            ]
+                        }
+                    }
+                ]
+            }]
+        }
+    }
+}

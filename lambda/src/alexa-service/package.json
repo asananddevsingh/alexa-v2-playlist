@@ -1,0 +1,44 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handlers.js",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "bunyan-cloudwatch": "^2.2.0",
+    "node-fetch": "^2.2.0",
+    "xml2js": "^0.4.19"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "text-summary",
+      "html"
+    ],
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "AppSyncDataSources Lambda Unit Report"
+        }
+      ]
+    ]
+  },
+  "jest-html-reporter": {
+    "pageTitle": "Economist",
+    "outputPath": "./coverage/testcasereport.html",
+    "includeFailureMsg": true
+  },
+  "devDependencies": {
+    "jest": "^23.4.1",
+    "jest-html-reporter": "^2.4.2"
+  },
+  "scripts": {
+    "test": "jest"    
+  },
+  "author": "GL-Eco",
+  "license": "ISC"
+}

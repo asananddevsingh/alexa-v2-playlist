@@ -1,0 +1,10 @@
+**/.idea
+**/.ask
+**/.vscode
+**/node_modules
+**/coverage
+**/*.zip
+**/dist
+**/package-lock.json
+sync_upstream.sh
+podcast/**

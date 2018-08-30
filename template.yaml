@@ -1,0 +1,87 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda for AppSync which act as DataSource, and lambda for Alexa Skill Interface.
+Resources:
+  AppSyncFuntion:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: handlers.handler
+      Runtime: nodejs6.10
+      CodeUri: ./lambda/src/alexa-service
+      FunctionName: Alexa-AppsycnDataSources-TopicAndHighlights
+      Events:
+        AppSyncApiCICD:
+          Type: Api
+          Properties:
+            Path: /appsyncDB
+            Method: GET
+  AlexaLambda:
+    Type: AWS::Serverless::Function
+    Properties:    
+      Handler: index.handler
+      Runtime: nodejs8.10
+      CodeUri: ./lambda/src/alexa-interface
+      Policies: AmazonDynamoDBFullAccess
+      FunctionName: Alexa-Lambda-TopicAndHighlights
+      Events:
+        AppSyncApiCICD:
+          Type: AlexaSkill
+          AppId: amzn1.ask.skill.bd8de2c6-a2d0-4383-a791-e91fd0459d60
+  AppSyncApi:
+    Type: "AWS::AppSync::GraphQLApi"
+    Properties:
+      Name: Alexa-AppSync-TopicAndHighlights
+      AuthenticationType: API_KEY
+  LambdaAppSyncDataSource:
+    Type: "AWS::AppSync::DataSource"
+    Properties:
+      ApiId: !GetAtt AppSyncApi.ApiId
+      Name: LambdaAppSyncDataSource
+      LambdaConfig: 
+        LambdaFunctionArn: !GetAtt AppSyncFuntion.Arn
+      Description: AppSync Lambda Source
+      Type: AWS_LAMBDA
+      ServiceRoleArn: "arn:aws:iam::397087800940:role/service-role/appsync-datasource-lam-622ocn-Alexa-AppsycnDataSou"
+  getAllDataFromXMLRSS:
+    Type: "AWS::AppSync::Resolver"
+    DependsOn: Schema
+    Properties:
+      ApiId: !GetAtt AppSyncApi.ApiId
+      TypeName: Query
+      FieldName: getAllDataFromXMLRSS
+      DataSourceName: !GetAtt LambdaAppSyncDataSource.Name
+      RequestMappingTemplate: |
+        {
+            "version" : "2017-02-28",
+            "operation" : "Invoke",
+            "payload" : {
+                "field" : "getAllDataFromXMLRSS",
+                "arguments" : $utils.toJson($context.arguments)
+            }
+        }
+      ResponseMappingTemplate: "$util.toJson($context.result)"
+  getDataByTopics:
+    Type: "AWS::AppSync::Resolver"
+    DependsOn: Schema
+    Properties:
+      ApiId: !GetAtt AppSyncApi.ApiId
+      TypeName: Query
+      FieldName: getDataByTopics
+      DataSourceName: !GetAtt LambdaAppSyncDataSource.Name
+      RequestMappingTemplate: |
+        {
+            "version" : "2017-02-28",
+            "operation" : "Invoke",
+            "payload" : {
+                "field" : "getDataByTopics",
+                "arguments" : $utils.toJson($context.arguments)
+            }
+        }
+      ResponseMappingTemplate: "$util.toJson($context.result)"
+  Schema:
+    Type: "AWS::AppSync::GraphQLSchema"
+    Properties:
+      ApiId: !GetAtt AppSyncApi.ApiId
+      DefinitionS3Location: s3://alexabucket1719/schema.graphql
+      
+        
