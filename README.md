@@ -1,16 +1,16 @@
-# Audio Player - The Economist
+# Audio Player
 The Alexa Skills Kit now allows developers to build skills that play long-form audio content on Alexa devices. This project demonstrates how to use the new interfaces for triggering playback of audio and handling audio player input events.
 
 ## About the product
-1. To have an upper hand and to be a leader in market, Economist always tries to be best in industry, and Alexa is perfect Solution .
+1. To have an upper hand and to be a leader in market, we always tries to be best in industry, and Alexa is perfect Solution .
 
 2. Alexa Cohesively interact with Voice assistant and query per subscribed person.
 
-3. The Economist Global Business Review is a new bilingual digital app from the editors of The Economist Group.
+3. We Global Business Review is a new bilingual digital app from the editors of We Group.
 
 4. Each month, the best business, finance and technology articles from the weekly publication are selected and translated, and delivered to our mobile device with an intuitive and attractive user interface.
 
-5. The Economist Global Business Review can be accessed either via an iPhone or Android Smartphone or tablet & now Alexa. Person can easily subscribed to Alexa skill in just few steps. & by simple invocation “Alexa, open the economist”.
+5. We Global Business Review can be accessed either via an iPhone or Android Smartphone or tablet & now Alexa. Person can easily subscribed to Alexa skill in just few steps. & by simple invocation “Alexa, open We”.
 
 ## How to Run the Sample
 You will need to comply to the prerequisites below and to change a few configuration files before creating the skill and upload the lambda code.
@@ -109,7 +109,7 @@ export const constants = {
 When done, you are ready to test from the command line, or using the Alexa developer console.
 
 ```bash
- $ ask simulate -l en-US -t "alexa, open the economist"
+ $ ask simulate -l en-US -t "alexa, open audio player"
 
  ✓ Simulation created for simulation id: 4a7a9ed8-94b2-40c0-b3bd-fb63d9887fa7
 ◡ Waiting for simulation response{
@@ -138,28 +138,3 @@ The codebase of the skill starts with lambda folder at the root and the lambda f
 * **services :** This folder contains ```graphqlServices.js``` file which holds the GraphQL end-points serving data to the skill.
 * **utilities :** This folder contains the utility files that has been used within the skill such as ```cloudwatchLogger.js```, ```timeZoneUtil``` etc.  
 * **index.js:** This file contians ```index.handler``` lambda entry point.
-
-## Cleanup
-If you were deploying this skill just for learning purposes or for testing, do not forget to clean your AWS account to avoid recurring charges for your DynamoDB table.
-
-- delete the lambda function.
-- delete the IAM execution role.
-- delete the DynamoDB table.
-
-## TO DO LIST
-
-### Development: 
-      1. Pending tasks in the backlog.
-      2. Fix the bug of NOT auto-playing the audio files after resuming the last session.
-      3. Implement full fledge universal analytics of Google. Till now very basic implementaion is done for only some parts of the skill.
-      4. GraphQL is taking the case-sensitive topics that should be fixed.
-      5. GraphQL should give empty data list for unavilable topic instean of throwing the error.
-      6. Need to replace the publicly hosted image for alexa cards with images hosted at s3 bucket.
-      7. Get rid of API Key authorization type and remove "xAPIKey' from constants file.
-
-### Skill distribution and configuration:
-      1. Upload the Small and large skill icon for all the supported languages.
-      2. Review and add all possible utterances for intents.
-      3. Write the distribution details such as "One Sentence Description", "Detailed Description", "Example Phrases", "Keywords".
-      4. Add the "Privacy Policy URL" with skill.
-      5. Add the Privacy "Terms of Use URL" skill.
