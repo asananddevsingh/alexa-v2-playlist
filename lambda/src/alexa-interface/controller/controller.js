@@ -25,6 +25,7 @@ const controller = {
     const token = playOrder[index];
     let audioSpeakText = '';
     let isEndOfThePlaylist = true;
+    playbackInfo.nextStreamEnqueued = false;
 
     if (playbackInfo.playOrder && playbackInfo.playList) {
       isEndOfThePlaylist = playbackInfo.playOrder[playbackInfo.index] === playbackInfo.playList.length - 1;
